@@ -37,6 +37,7 @@ func Benchmark_Mem(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		s := "0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789"
 		a := []byte(s)
+		// If line below is uncommented it doubles the memory usage.
 		//void(string(a))
 		void(a)
 	}
